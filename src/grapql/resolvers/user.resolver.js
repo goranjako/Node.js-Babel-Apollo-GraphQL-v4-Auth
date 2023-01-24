@@ -20,6 +20,7 @@ export default {
         throw new GraphQLError ("User not found");
       }
     },
+    //getAll
     users: async (parent, args, { req }) => {
       await authHeader(req);
       try {
