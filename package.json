@@ -3,11 +3,15 @@
   "version": "1.0.0",
   "description": "Apollo graphql JWT Auth",
   "main": "index.js",
+
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon --exec babel-node ./src/app.js",
+    "dev": "nodemon --exec babel-node ./src/index.js",
     "build": "rimraf dist && babel ./src --out-dir dist ",
-    "start": "node ./dist/index.js "
+    "start-dev": "node ./dist/index.js ",
+    "start": "pm2 start ./dist/index.js ",
+    "stop": "pm2 stop ./dist/index.js ",
+    "restart": "pm2 restart ./dist/index.js "
   },
   "repository": {
     "type": "git",
